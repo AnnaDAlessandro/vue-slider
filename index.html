@@ -38,8 +38,9 @@
                     <div v-for="(element,index) in slides"
                     :key="index"
                     class="thumb"
-                    :class="active">
-                        <img :src="element.image" alt="Svezia" />
+                    :class="index === currentImage ? `active` : ``"
+                    @click = "changeImage(index)">
+                        <img :src="element.image" alt="element" />
                     </div>
                     
                 </div>

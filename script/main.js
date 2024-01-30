@@ -38,16 +38,16 @@ createApp({
     methods:{
         nextImage(){
             this.currentImage++
-            if(this.currentImage>this.slides.lenght-1){
+            if(this.nextImage > this.slides.lenght - 1){
                 this.currentImage=0
             }
         },
         prevImage(){
-            this.currentImage --
-            if(this.currentImage < 0){
-                this.currentImage = this.slides.lenght - 1
+            this.currentImage--
+            if(this.nextImage > 0){
+                this.currentImage=this.slides.lenght - 1
             }
         }
-  }
+    }
   }).mount('#app')
   
